@@ -1,6 +1,6 @@
 var scoreH1 = document.getElementById('score_h1');
 var HomeButton = document.getElementById('Home_butt');
-var score = 0 ;
+var score = 10000 ;
 var doubleClick = document.getElementById('double_click')
 var upgrade_but = document.getElementById('upgrade_bottom')
 var upgrade0 = 1;
@@ -85,6 +85,105 @@ button_auto_click.addEventListener('click', function(){
         if (!autoClickInterval) {
             autoClickInterval = setInterval(function() {
                 HomeButton.click();
+            }, 1000); // каждую секунду
+        }
+    }
+});
+
+let autoClickInterval1;
+var but_charon_baby = document.getElementById("charon_baby_button");
+var p_charon_baby = document.getElementById("charon_baby_P");
+var lvl_charon_baby = 0;
+var charon_baby_sum = document.getElementById("sum_charon_baby_p");
+var sum_charon_baby = 200;
+var click_baby_charon = 0;
+var plus_click = document.getElementById("click_plus");
+var click_korm = 0;
+but_charon_baby.addEventListener('click', function(){
+    if (score < sum_charon_baby) {
+        alert('Не хватает coins');
+    } else {
+        score = score - sum_charon_baby;
+        lvl_charon_baby++;
+        sum_charon_baby = sum_charon_baby + 100;
+        click_korm++;
+        click_baby_charon++;
+        p_charon_baby.textContent = "Уровень: " + lvl_charon_baby;
+        charon_baby_sum.textContent = "Стоимость прокачки: " + sum_charon_baby;
+        scoreH1.textContent ='Счётчик coins: ' + score;
+        plus_click.textContent = '+' + click_korm + ' coins в секунду';
+            // Запускаем интервал, если он еще не запущен
+        if (!autoClickInterval1) {
+            autoClickInterval1 = setInterval(function() {
+                score = score + click_baby_charon;
+                scoreH1.textContent ='Счётчик coins: ' + score;
+            }, 1000); // каждую секунду
+        }
+    }
+});
+
+var but_mouse = document.getElementById("mouse_but");
+var P_mouse = document.getElementById("mouse_P");
+var p_sum_mouse = document.getElementById("sum_mouse_p");
+var mouse_click = document.getElementById("click_mouse");
+var lvl_mouse = 0;
+var sum_mouse = 500;
+var plus_click_mouse = 0;
+var click_mouse = 0;
+let autoClickInterval2;
+
+but_mouse.addEventListener("click", function(){
+    if (score < sum_mouse) {
+        alert('Не хватает coins')
+    }
+    else{
+        score = score - sum_mouse;
+        lvl_mouse++;
+        sum_mouse +=200;
+        plus_click_mouse += 5;
+        click_mouse += 5;
+        P_mouse.textContent = "Уровень: " + lvl_mouse;
+        p_sum_mouse.textContent = "Стоимость прокачки: " + sum_mouse;
+        scoreH1.textContent ='Счётчик coins: ' + score;
+        mouse_click.textContent = '+' + plus_click_mouse + ' coins в секунду';
+        if (!autoClickInterval2) {
+            autoClickInterval2 = setInterval(function() {
+                score = score + click_mouse;
+                scoreH1.textContent ='Счётчик coins: ' + score;
+            }, 1000); // каждую секунду
+        }
+    }
+});
+
+
+var but_lotok = document.getElementById("lotok_button");
+var P_lotok = document.getElementById("lotok_P");
+var p_sum_lotok = document.getElementById("sum_lotok");
+var lotok_click = document.getElementById("click_lotok");
+var lvl_lotok = 0;
+var sum_lotok = 800;
+var plus_click_lotok = 0;
+var click_lotok = 0;
+let autoClickInterval3;
+
+but_lotok.addEventListener("click", function(){
+    if (score < sum_lotok) {
+        alert('Не хватает coins')
+    }
+    else{
+        score = score - sum_lotok;
+        lvl_lotok++;
+        sum_lotok +=300;
+        plus_click_lotok += 10;
+        click_lotok += 10;
+        P_lotok.textContent = "Уровень: " + lvl_lotok;
+        p_sum_lotok.textContent = "Стоимость прокачки: " + sum_lotok;
+        scoreH1.textContent ='Счётчик coins: ' + score;
+        lotok_click.textContent = '+' + plus_click_lotok + ' coins в секунду';
+        if (!autoClickInterval3) {
+            autoClickInterval3 = setInterval(function() {
+                score = score + click_lotok;
+                scoreH1.textContent ='Счётчик coins: ' + score;
             }, 1000); // каждую секунду
         }
     }

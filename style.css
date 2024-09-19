@@ -2,6 +2,8 @@ body{
     text-align: center;
     margin: 0;
     padding: 0;
+    overflow: hidden;
+    background-image: url("img/backgroubd.jpg");
 }
 
 h1,p, h2, h3, h4{
@@ -11,18 +13,35 @@ p{
     font-size: 20px;
 }
 #clicker{
-    width: 300px;
+    width: 500px;
     height: 900px;
     /* background-color: rgb(117, 117, 117); */
     margin: 0 auto;
 }
 #upgrade{
-    width: 400px;
+    width: 450px;
     height: 900px;
-    background-color: rgb(117, 117, 117);
+    background-color: #eecd38;
     float: right;
-    border-radius: 15px 0px 0px 0px;
-    overflow: scroll;
+    border-radius: 15px 0px 0px 15px;
+    /* overflow: scroll; */
+    border: 10px solid #cf9008 ;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+    position: relative;
+    left: 470px;
+}
+#score_h1{
+    position: relative;
+    bottom: -15px;
+}
+
+#info{
+    background-color: #eecd38;
+    width: 500px;
+    height: 400px;
+    border-radius: 15px;
+    margin-top: 20px;
+    border: 20px solid #cf9008 ;
 }
 #img_up{
     width: 120px;
@@ -35,6 +54,8 @@ p{
 #upgrade_bottom{
     float: right;
     margin: 10px;
+    margin-right: 30px;
+
 }
 
 #Home_butt{
@@ -46,6 +67,9 @@ p{
     /* отображаем курсор в виде руки при наведении; некоторые
     считают, что необходимо оставлять стрелочный вид для кнопок */
     cursor: pointer;
+    position: relative;
+    bottom: 45px;
+
 }
 
 #img_up_X2{
@@ -58,6 +82,8 @@ width: 120px;
 #X2{
     margin-top: 30px;
     border: 3px solid black;
+    margin-left: 9px;
+  margin-right: 6px;
 }
 
 #h2_time_x2{
@@ -73,7 +99,8 @@ width: 120px;
 
 #upgrade_bottom_X2{
     float: right;
-  margin: 10px;
+  margin: 5px;
+  margin-right: 30px;
 }
 
 #img_auto_click{
@@ -95,8 +122,97 @@ width: 120px;
     margin: 10px;
     height: 70px;
     width: 218px;
+    margin-right: 30px;
 }
 #Auto_click{
     margin-top: 30px;
     border: 3px solid black;
+}
+
+.Home_butt{
+    transition: transform 0.2s ease;
+}
+
+.up_but_1{
+    transition: transform 0.2s ease;
+    border: 1px solid #fff;
+	border-radius: 50px;
+    background-color: #fff;
+}
+.up_but_1:hover {
+    transform: scale(1.1);
+    background-color: white;
+}
+
+#sum_up_p{
+    margin-top: 40px;
+}
+#upgradeP{
+    margin-top: 100px;
+}
+
+#sum_up_p_X2{
+    margin-top: 40px;
+}
+#upgradeP_X2{
+    margin-top: 100px;
+}
+
+#pets{
+    float: left;
+    width: 450px;
+    height: 900px;
+    background-color: #eecd38;
+    border-radius: 0px 15px 15px 0px;
+    /* overflow: scroll; */
+    border: 10px solid #cf9008 ;
+    position: relative;
+    left: -470px;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+#charon_baby{
+    margin-top: 30px;
+    border: 3px solid black;
+}
+#charon_baby_button{
+    float: right;
+    margin: 10px;
+    height: 70px;
+    width: 218px;
+    margin-right:30px;
+}
+
+.hidden{
+    transform: translateX(-460px);
+    /* Сдвигаем элемент вправо на 100% его ширины */
+
+}
+#hideButton{
+    margin-top: 20px;
+    background-color: white;
+}
+#hideButton2{
+    margin-top: 20px;
+    background-color: white;
+}
+
+.hidden2{
+    transform: translateX(460px); /* Перемещение влево */
+    /* opacity: 0; Исчезновение */
+}
+
+#mouse_but{
+    float: right;
+    margin: 10px;
+    height: 70px;
+    width: 218px;
+    margin-right:30px;
+}
+
+#lotok_button{
+    float: right;
+    margin: 10px;
+    height: 70px;
+    width: 218px;
+    margin-right:30px;
 }

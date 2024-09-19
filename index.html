@@ -11,35 +11,66 @@
     </head>
 <body>
 <div id="game">
+    <div id="pets">
+        <div id="X2">
+            <img id="img_up" src="img/1600.jpg" alt="">
+            <button id="charon_baby_button" class="up_but_1"><p>КУПИТЬ КОРМ</p></button>
+            <p id="charon_baby_P">Уровень: 0</p>
+            <p id="sum_charon_baby_p">Стоимость прокачки: 200</p>
+            <p id="click_plus">+1 coins в секунду</p>
+        </div>
+        <div id="X2">
+            <img id="img_up" src="img/мышь.jpg" alt="">
+            <button id="mouse_but" class="up_but_1"><p>КУПИТЬ ИГРУШКУ</p></button>
+            <p id="mouse_P">Уровень: 0</p>
+            <p id="sum_mouse_p">Стоимость прокачки: 500</p>
+            <p id="click_mouse">+5 coins в секунду</p>
+        </div>
+        <div id="X2">
+            <img id="img_up" src="img/лоток.jpg" alt="">
+            <button id="lotok_button" class="up_but_1"><p>КУПИТЬ ЛОТОК</p></button>
+            <p id="lotok_P">Уровень: 0</p>
+            <p id="sum_lotok">Стоимость прокачки: 800</p>
+            <p id="click_lotok">+10 coins в секунду</p>
+        </div>
+        
+        <button id="hideButton2" class="up_but_1"><h1>СКРЫТЬ МЕНЮ</h1></button>
+    </div>
     <div id="upgrade">
         <div id="X2">
-            <img id="img_up" src="img/sticker1.jpg" alt="">
-            <button id="upgrade_bottom"><p>ПРОКАЧАТЬ КЛИК</p></button>
+            <img id="img_up" src="img/cat2.png" alt="">
+            <button id="upgrade_bottom" class="up_but_1"><p>ПРОКАЧАТЬ КЛИК</p></button>
             <p id="upgradeP">Уровень: 0</p>
             <p id="sum_up_p">Стоимость прокачки: 50</p>
         </div>
         <div id="X2">
             <img id="img_up_X2" src="img/sticker2.jpg" alt="">
-            <button id="upgrade_bottom_X2"><p>КЛИК X2 НА ВРЕМЯ</p></button>
+            <button id="upgrade_bottom_X2"  class="up_but_1"><p>КЛИК X2 НА ВРЕМЯ</p></button>
             <p id="upgradeP_X2">Уровень: 0</p>
             <p id="sum_up_p_X2">Стоимость прокачки: 1000</p>
         </div>
-         <div id="Auto_click">
+         <div id="X2">
             <img id="img_auto_click" src="img/sticker3.jpg" alt="">
-            <button id="but_auto_click"><p>Авто клик</p></button>
-            <p>ЕДИНОРАЗОВАЯ ПОКУПКА</p>
-            <p>Стоимость прокачки: 10000</p>
+            <button id="but_auto_click" class="up_but_1"><p>Авто клик</p></button>
+            <p id="p_auto_click" style="margin-top: 100px;">ЕДИНОРАЗОВАЯ ПОКУПКА</p>
+            <p id="sum_auto_click" style="margin-top: 50px;">Стоимость прокачки: 10000</p>
          </div>
+         <button id="hideButton" class="up_but_1"><h1>СКРЫТЬ МЕНЮ</h1></button>
     </div>
     <div id="clicker">
-        <h1 id="score_h1">Счётчик coins: 0</h1>
+        <div id="info">
+        <h1 id="score_h1" style="font-size: 50px; margin: 20px;">Счётчик coins: 0</h1>
         <h2 id="h2_lvlcoin">Coin за клик: +1</h2>
-        <button id="Home_butt"><img src="img/cat.jpg" alt="cat.jpg" style="width: 220px; height: 220px; margin-top: 290px;"></button>
+        <button id="showButton" class="up_but_1" ><h1>МЕНЮ ПРОКАЧКИ</h1></button>
+        <button id="showButton2" style="width: 276px; margin-top: 10px; height: 72px; " class="up_but_1"><h1>ДОП. ПРЕДМЕТЫ</h1></button>
+        </div>
 
-        <h2 id="h2_time_x2">Осталось времени двойного клика: 1:00</h2>
+        <button id="Home_butt" class="Home_butt" style="height: 320px; margin-top: 130px;"><img  src="img/cat3.png" alt="cat.jpg" style="width: 320px; height: 320px;"></button>
     </div>
+
 
 </div>
     <script src="scripts.js"></script>
+    <script src="animation.js"></script>
 </body>
 </html>
