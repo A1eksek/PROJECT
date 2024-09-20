@@ -1,6 +1,6 @@
 var scoreH1 = document.getElementById('score_h1');
 var HomeButton = document.getElementById('Home_butt');
-var score = 10000 ;
+var score = 0 ;
 var doubleClick = document.getElementById('double_click')
 var upgrade_but = document.getElementById('upgrade_bottom')
 var upgrade0 = 1;
@@ -16,7 +16,25 @@ var up_but_x2 = document.getElementById('upgrade_bottom_X2');
 var p_but_x2 = document.getElementById('upgradeP_X2');
 var p_sum_up_x2 = document.getElementById('sum_up_p_X2');
 var time_up_x2 = document.getElementById('h2_time_x2');
+var but_ok = document.getElementById("ok")
 
+//alert
+var new_alert = document.getElementById("alert")
+var back = document.getElementById("back1")
+function def(){
+    
+    new_alert.classList.remove('alert');
+    new_alert.classList.add('alert2');
+    back.classList.remove('back11');
+    back.classList.add('back22')
+}
+
+but_ok.addEventListener('click', function(){
+    new_alert.classList.remove('alert2');
+    new_alert.classList.add('alert');
+    back.classList.remove('back22')
+    back.classList.add('back11')
+})
 
 document.addEventListener('keydown', function(event){
     if(event.keyCode == 13) { // Исправление здесь
@@ -27,7 +45,7 @@ document.addEventListener('keydown', function(event){
  
 upgrade_but.addEventListener('click', function(){
     if(score < sum_up){
-        alert("Недостаточно coins");
+        def()
     }
     else{
         score = score - sum_up;
@@ -49,7 +67,7 @@ HomeButton.addEventListener('click', function(){
 
 up_but_x2.addEventListener('click', function(){
     if ( score < sum_up_x2){
-        alert('Нехватает coins')
+        def()
     }
     else{
         up_but_x2.disabled = true;
@@ -77,7 +95,7 @@ let autoClickInterval;
 
 button_auto_click.addEventListener('click', function(){
     if (score < sum_auto_click) {
-        alert('Не хватает coins');
+        def()
     } else {
         score = score - sum_auto_click;
         button_auto_click.disabled = true;
@@ -101,7 +119,7 @@ var plus_click = document.getElementById("click_plus");
 var click_korm = 0;
 but_charon_baby.addEventListener('click', function(){
     if (score < sum_charon_baby) {
-        alert('Не хватает coins');
+        def()
     } else {
         score = score - sum_charon_baby;
         lvl_charon_baby++;
@@ -134,7 +152,7 @@ let autoClickInterval2;
 
 but_mouse.addEventListener("click", function(){
     if (score < sum_mouse) {
-        alert('Не хватает coins')
+        def()
     }
     else{
         score = score - sum_mouse;
@@ -168,7 +186,7 @@ let autoClickInterval3;
 
 but_lotok.addEventListener("click", function(){
     if (score < sum_lotok) {
-        alert('Не хватает coins')
+        def()
     }
     else{
         score = score - sum_lotok;
